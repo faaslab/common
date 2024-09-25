@@ -16,8 +16,32 @@ func init() {
 	NewLogger()
 }
 
+func Infof(template string, args ...interface{}) {
+	l.Infof(template, args...)
+}
+
+func Fatalf(template string, args ...interface{}) {
+	l.Fatalf(template, args...)
+}
+
+func Debugf(template string, args ...interface{}) {
+	l.Debugf(template, args...)
+}
+
+func Warnf(template string, args ...interface{}) {
+	l.Warnf(template, args...)
+}
+
+func Errorf(template string, args ...interface{}) {
+	l.Errorf(template, args...)
+}
+
 func Fatal(args ...interface{}) {
 	l.Fatal(args)
+}
+
+func Debug(args ...interface{}) {
+	l.Debug(args)
 }
 
 func Info(args ...interface{}) {
