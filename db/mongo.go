@@ -22,7 +22,7 @@ func NewClient(ctx context.Context, uri string) (*mongo.Client, error) {
 		logger.Errorf("Error connecting to MongoDB: %v", err)
 		return nil, err // Handle connection error
 	}
-	defer client.Disconnect(ctx)
+	// defer client.Disconnect(ctx)
 
 	return client, nil
 }
